@@ -8,6 +8,8 @@ import {sort} from '../actions/lists';
 import styled from 'styled-components'
 
 const BoardContainer = styled.div`
+height:auto;
+width:auto;
 
   margin-top:0.5rem;
   margin-left:1.6rem;
@@ -45,7 +47,7 @@ class App extends React.Component{
       <DragDropContext onDragEnd={this.onDragEnd}>
         <BoardContainer>
           <BoardTitle>Personel Board</BoardTitle>
-          <Droppable droppableId="all-lists" direction="horizontal" type="list">
+          <Droppable style={{display:"flex"}} droppableId="all-lists" direction="horizontal" type="list">
           {provided => (
             <div style={style.listContainer} {...provided.droppableProps} ref={provided.innerRef}>
               {lists.map((list,index) =>{

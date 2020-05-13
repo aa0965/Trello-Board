@@ -58,6 +58,7 @@ class TrelloButtton extends React.Component{
       <div onClick={this.openForm}
          style={{
           ...styles.openFormButtonGroup,
+
           opacity:buttonTextOpacity,
           color:buttonTextColor,
           backgroundColor:buttonTextBackGround
@@ -124,7 +125,7 @@ const styles = {
     display:"flex",
     alignItems:"center",
     cursor:"pointer",
-
+    minWidth:200,
     height:36,
     width:260,
     borderRadius:3
